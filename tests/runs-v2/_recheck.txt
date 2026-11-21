@@ -1,0 +1,51 @@
+Aabha              com❌  in❌  co.in✅  youtube✅  x❌
+Sudar              com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "sudar"
+Deepti             com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Deepti"
+Thendral           com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "thendral"
+Koodal             com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "koodal"
+National Gold House com✅  in✅  co.in✅  youtube✅  x✅
+Nilavu             com❌  in❌  co.in✅  youtube❌  x❌
+                   ↳ youtube: "നിലാവിന്റെ കൂട്ടുകാരൻ"
+Thanal             com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Thanal" (A Creative Venture for Dynamic People!)
+Mounam             com❌  in❌  co.in✅  youtube❌  x❌
+                   ↳ youtube: "MOUNAM" (Fun)
+Thalir             com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Thalir" (Unlocking the Future of Agriculture and Agribusiness with Th)
+Mazha              com❌  in❌  co.in✅  youtube❌  x✅
+                   ↳ youtube: "Mazha"
+CureVeda           com❌  in❌  co.in✅  youtube✅  x✅
+Chaigiri           com✅  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "Chaigiri"
+Chai Gang          com❌  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "Chai Gang"
+Chai Bindaas       com✅  in✅  co.in✅  youtube❌  x✅
+                   ↳ youtube: "ChaiBindaas"
+Ghoont             com❌  in❌  co.in✅  youtube❌  x❌
+                   ↳ youtube: "ghoont"
+Ghotbhar           com✅  in✅  co.in✅  youtube✅  x✅
+Gandhi Chai Adda   com✅  in✅  co.in✅  youtube✅  x✅
+Hausla             com❌  in❌  co.in❌  youtube❌  x❔
+Shikhar            com❌  in❌  co.in❌  youtube✅  x❌
+Kadam              com❌  in❌  co.in❌  youtube❔  x❌
+Chayan             com❌  in❌  co.in❔  youtube❌  x❌
+                   ↳ youtube: "Chayan"
+Bharat Digital University com✅  in❔  co.in✅  youtube✅  x✅
+Tashan             com❌  in❌  co.in❌  youtube✅  x❌
+Dhaak              com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Rock ff" (I love india )
+Tagda              com❌  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "Rdx varun 99" (Gamer)
+Solebaaz           com✅  in✅  co.in✅  youtube✅  x✅
+Bhaukaal           com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Rita Devi" (Hello! Fans this is a  YouTube channel dedicated to memes an)
+Adidesi            com✅  in✅  co.in✅  youtube❌  x✅
+                   ↳ youtube: "Adi Desi"
+
+✅ likely-free  ❌ taken  ❔ unknown  (P)=parked/for-sale  (L)=live site  (R)=redirects elsewhere  (-)=no site
+↳ = who holds it. Same-category holder = FAIL, unrelated/parked/no-site = WARN.
+X/Instagram/LinkedIn owners can't be read automatically: open the link and check by hand. Run without --compact for IP India / MCA links.

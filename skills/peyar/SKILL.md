@@ -45,9 +45,10 @@ If the user gave a full brief, **don't ask**. List your assumptions in 3–5 bul
 Every cut needs **evidence**: a search result, script output or a stated meaning. "From my knowledge" or "weaker story" is **not** a valid reason at this step (taste comes in step 5).
 1. **Meaning / slang** (`references/indian-languages.md`): full word, halves and sub-strings. Output a mini table: `name | languages checked | concern | confidence`, and list the languages you can't vouch for.
 2. **Descriptive / generic (D3):** the plain word for the product or ingredient in that category (for example "Thinai" for millet snacks, "Nalam" for a clinic). Usually can't be trade marked, and it is crowded.
-3. **Existing use:** one web search per survivor ("<name> <category> India"), plus the domain-holder lines (↳) from `check_name.py`. Drop it if a same-category business already uses the name. Note that web search is weak for small Indian businesses, so **no results is weak evidence** of a free name. Say so, and lean on the registry checks in step 6.
-4. **Sound:** run `python3 SKILL_DIR/scripts/score.py <names>`. Drop anything under 60. The score measures sound and spelling only. It says nothing about meaning or availability, and long founder-name formats ("Dr X Dental Care") score low by design, so judge those on the norm instead.
+3. **Existing use:** one web search per survivor ("<name> <category> India"), plus the domain-holder lines (↳) from `check_name.py`. Drop it if a same-category business already uses the name. Also drop it (reason: "crowded word") if the exact .com **and** .in are both held by **live** businesses of any category **and** the word is a common dictionary word. You'll never own its search results. Note that web search is weak for small Indian businesses, so **no results is weak evidence** of a free name. Say so, and lean on the registry checks in step 6.
+4. **Sound:** run `python3 SKILL_DIR/scripts/score.py <names>`. Most real names score 85+, so **cut on the flags, not just the number**: drop a name if it scores under 75, **or** has 2+ spelling/accent flags, **or** has a "consonant cluster" / "very few vowels" flag. The score measures sound and spelling only. It says nothing about meaning or availability, and long founder-name formats ("Dr X Dental Care") score low by design, so judge those on the norm instead.
 5. **If a domain is a HARD constraint:** run `check_name.py --compact --no-probe` on the ~15–20 survivors **now**, and keep only those that pass.
+- **Reserve bucket:** once you have ≥8 evidence-backed survivors, any candidates you didn't screen go in a `Reserve (not screened)` line. That is honest: never present them as cuts, and never write "taste cut" or "weaker story" at this step.
 - **Write the `## Survivors` table (required, 8–10 rows)** before picking finalists:
   `| Name | Method | Meaning screen (langs, concern, confidence) | Existing-use evidence (search/↳ result) | Sound | .com/.in |`
 - **If fewer than 5 survive:** generate 10–15 more using the methods that survived best (or with modifiers: get-, -hq, -labs, -foods, a place suffix), then re-screen. Say that you looped.
@@ -58,7 +59,8 @@ Every cut needs **evidence**: a search result, script output or a stated meaning
 - Run `python3 SKILL_DIR/scripts/check_name.py <names> --compact --tlds com,in,co.in` (tech: `com,in,ai,io`; add `--sites youtube,x,github` for developer tools). For taken domains, the probe shows live (L), parked/for-sale (P), redirect (R) or no site (-). Parked or no-site domains = WARN, not FAIL.
 - For every taken handle, open it and decide: same-category brand = FAIL, unrelated or dormant = WARN.
 - Score **all 36 points** in `references/checklist-36.md` for each finalist. Use **UNVERIFIED** for anything you couldn't check live: IP India, MCA and Instagram are always UNVERIFIED unless the user pastes results. UNVERIFIED is excluded from the score and counted separately. **D1 and D4 can never be PASS without a live registry search.**
-- Compute scores with `python3 SKILL_DIR/scripts/score36.py <Name> "<36 letters P/W/F/U/N>" ...`. **Never add them up by hand.** Paste its output.
+- Compute scores with `python3 SKILL_DIR/scripts/score36.py <Name> "<36 letters P/W/F/U/N>" ...` for **all finalists plus the founder's own name in one call**. **Never add them up by hand.** Paste the **full output verbatim in one fenced code block** under the ranking table.
+- Fill the domain/handle cells by **copying `check_name.py --compact` output**, not by retyping. Run it with `--sites youtube,x` and use the ↳ lines for holder notes.
 - Any D-group **FAIL** removes the name.
 - **Ranking is judgement, informed by the evidence.** Scores within 5 points are a tie. Break ties in this order: lower legal risk → stronger story/positioning → better availability → better recall and sound.
 
@@ -108,5 +110,5 @@ End with: *Peyar gives heuristics, not legal advice. Have a registered trade mar
 - Numerology/vastu: respect it, but it never overrides a legal, meaning or availability FAIL.
 - **Evaluating the user's own name:** run score.py, the meaning screen, an existing-use search and check_name.py on it, then score it on the 36 points. If it scores <65 or has a D-FAIL, the full workflow's top picks are the alternatives (no separate list is needed).
 - Multi-word names are joined for domains and handles ("Ek Seat" becomes ekseat). Say so in the table.
-- The deliverable is for the founder. Keep notes about the skill itself out of it.
+- The deliverable is for the founder. Keep notes about the skill itself out of it. **Don't use** "Peyar", "skill", "step N", "per the process" or "the reference says" in the deliverable text. Script names may appear only as code-block labels. Title it `# Brand name options: <business>`.
 - Worked examples are in `SKILL_DIR/../../examples/` if the repo is cloned.

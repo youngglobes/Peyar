@@ -1,0 +1,27 @@
+Jetbrew            com❌  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "JetBrew"
+Coldfuse           com❌  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "Aaron"
+Vega               com❌  in❌  co.in❌  youtube✅  x❌
+560 Cold           com✅  in✅  co.in✅  youtube✅  x✅
+Kovo               com❌  in❌  co.in❌  youtube✅  x❌
+Kilovo             com❌  in✅  co.in✅  youtube❌  x✅
+                   ↳ youtube: "Asen Mihaylov"
+Amp23              com✅  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "art"
+Volt78             com✅  in✅  co.in✅  youtube✅  x❌
+Zaptu              com❌  in✅  co.in✅  youtube❌  x❌
+                   ↳ youtube: "rebeca olivia vasquez govea"
+Plugwala           com✅  in✅  co.in✅  youtube✅  x✅
+Tailpot            com✅  in✅  co.in✅  youtube✅  x✅
+Tail91             com✅  in✅  co.in✅  youtube✅  x❌
+Ladle              com❌  in✅  co.in❌  youtube❌  x✅
+                   ↳ youtube: "ladle"
+Katori             com❌  in❌  co.in❌  youtube❌  x❌
+                   ↳ youtube: "Katori"
+Larder             com❌  in❌  co.in✅  youtube❌  x✅
+                   ↳ youtube: "Lard"
+
+✅ likely-free  ❌ taken  ❔ unknown  (P)=parked/for-sale  (L)=live site  (R)=redirects elsewhere  (-)=no site
+↳ = who holds it. Same-category holder = FAIL, unrelated/parked/no-site = WARN.
+X/Instagram/LinkedIn owners can't be read automatically: open the link and check by hand. Run without --compact for IP India / MCA links.

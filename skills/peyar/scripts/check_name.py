@@ -154,8 +154,17 @@ def check_domain(d: str, probe: bool = True) -> dict:
     return out
 
 
-def youtube_meta(url: str) -> dict:
-    """Channel name + bio for a taken YouTube handle, so you can judge same-category vs unrelated."""
+def youtube_meta(url: str, tries: int = 3) -> dict:
+    """Channel name + bio for a taken YouTube handle. Retries: YouTube serves a bot page under parallel load."""
+    for i in range(tries):
+        m = _youtube_meta_once(url)
+        if m.get("title"):
+            return m
+        time.sleep(2 * (i + 1))
+    return {"title": "", "about": "", "note": "owner not readable: open the link"}
+
+
+def _youtube_meta_once(url: str) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Cookie": "SOCS=CAI", "Accept-Language": "en"})
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
@@ -243,6 +252,8 @@ def render_compact(r: dict) -> str:
             owners.append(f"{x['target']}: {x['site']}" + (f' "{x["title"][:50]}"' if x.get("title") else ""))
         elif x["type"] == "handle" and x.get("title"):
             owners.append(f"youtube: \"{x['title']}\"" + (f" ({x['about'][:60]})" if x.get("about") else ""))
+        elif x["type"] == "handle" and x.get("note"):
+            owners.append(f"youtube: {x['note']}: {x['manual']}")
     if owners:
         line += "\n" + "\n".join(f"{'':<19}↳ {o}" for o in owners)
     return line

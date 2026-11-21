@@ -1,5 +1,71 @@
 # Peyar test report
 
+**Latest:** v3 (2026-11-21) · **Rounds:** v1 baseline → v2 (6 fixes) → v3 (global/alphanumeric mix)
+
+## Summary across rounds
+
+| Metric | v1 | v2 | v3 |
+|---|---|---|---|
+| Automated checks | 15/15 | 16/16 | **17/17** |
+| Unit tests | 13/13 | 16/16 | **16/16** |
+| Graded skill runs (avg /10)* | 9.4 | 8.8 | — (mix test, see below) |
+| Founder trap names caught | 5/5 | 5/5 | — |
+| Top-pick quality (/5) | 3.2 | **4.0** | — |
+| 36-pt scores correct vs recompute | 2 slips | **24/24** | script-computed |
+| Availability errors vs recheck | 0 | 0 | 0 |
+| Finalists that are global-neutral or alphanumeric | ~0% | **0/24** | **12/15 (80%)** |
+
+*v2 was graded on a stricter rubric: R5–R7 now require the new candidate list, survivors table and pasted score36 output, so its total isn't directly comparable to v1. The quality and accuracy metrics did improve.
+
+---
+
+## v3: global / alphanumeric mix (2026-11-21)
+
+**Why:** in v2, all 24 finalists were Indian-language words. Causes: the test briefs invited Indian languages, the skill *required* an Indian-language method with no quota for global names, and the examples were India-heavy.
+
+**Fix:** a name-reach intake item (global-neutral / India-rooted / **mix by default**), method quotas (≥50% global-neutral, ≥3 alphanumeric under mix), a finalist-spread rule (≥3 methods, ≥2 global-neutral) and a new alphanumeric guide with 7 patterns.
+
+**Test:** 3 new briefs that say nothing about language.
+
+| Run | Finalists (method) | Global/alnum share |
+|---|---|---|
+| Cold brew, Bengaluru | Jetbrew (compound), Coldfuse (compound), Vega (Sanskrit), **560 Cold** (alnum: PIN prefix), Kovo (coined) | 4/5 |
+| EV charging, Hyderabad | Kilovo (coined), **Amp23** (alnum: 2W+3W), **Volt78** (alnum: 78°E meridian), Zaptu (coined), Plugwala (Hinglish) | 4/5 |
+| Pet food, Mumbai | Tailpot (compound), **Tail91** (alnum: +91), Ladle (English), Larder (English), Katori (Hindi) | 4/5 |
+
+The availability recheck (`tests/runs-v3/_recheck.txt`) matches the runs' claims. India-rooted names still appear (3/15) wherever they fit, as intended for "mix".
+
+### v2 → v3 fixes also applied
+- `score36.py`: per-group unverified counts (`D:8/8+2U`) and a "legal group not cleared" warning.
+- `check_name.py`: YouTube owner names on taken handles (with retry under load); parked "/lander" pages detected; retry/backoff + WHOIS fallback for throttled registries.
+- SKILL.md: survivors table, fit gate, honest "reserve (not screened)" bucket, verbatim score36 output, cells copied from script output, no tool jargon in the founder-facing deliverable, flag-based sound cut, "crowded word" cut.
+- Checklist: "cure"/"University"/"Bank" are always FAIL under D6; Emblems Act surname case is WARN-verify; holder-aware E1/E2.
+
+### Known limitations (still open)
+- X, Instagram and LinkedIn owners can't be read automatically. Check by hand.
+- Web search is weak for small Indian businesses: "no results" ≠ free name. The registry checks remain the real test.
+- IP India and MCA have captchas, so D1/D4 stay UNVERIFIED until the founder runs them.
+- Most finalists land within 5 points (many points are unverifiable), so the final ranking is judgement guided by the tie-break order.
+
+---
+
+## v2: 6 fixes retest (graded)
+
+| Run | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 | R10 | Total | Top pick | Quality |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Jewellery | 1 | 1 | 1 | 1 | 1 | 0.5 | 0.5 | 1 | 1 | 1 | 9.0 | Aabha | 3.5 |
+| Ayurveda | 1 | 1 | 1 | 1 | 1 | 0.5 | 0.5 | 1 | 1 | 0.5 | 8.5 | Nilavu | 4 |
+| Cafe | 1 | 1 | 1 | 1 | 1 | 0.5 | 1 | 1 | 1 | 0.5 | 9.0 | Chaigiri | 4 |
+| Edtech | 1 | 1 | 1 | 1 | 1 | 0.5 | 0.5 | 1 | 1 | 0.5 | 8.5 | Hausla | 4.5 |
+| Streetwear | 1 | 1 | 1 | 1 | 1 | 1 | 0.5 | 1 | 1 | 0.5 | 9.0 | Tashan | 4 |
+
+The grader recomputed every 36-point score with score36.py, and all 24 finalists plus the 5 founder names match. The remaining deductions (taste cuts, partial score36 paste, tool jargon in deliverables) were fixed in v3's SKILL.md.
+
+---
+
+# v1 baseline (2026-11-20)
+
+
 **Date:** 2026-11-20 · **Version:** 0.1.0 (plus fixes made during testing) · **Tests:** 20 = 15 automated checks + 5 graded end-to-end skill runs
 
 ## Summary

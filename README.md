@@ -2,7 +2,7 @@
 
 **A Claude skill that names Indian brands the way branding studios do.**
 
-*Peyar* is Tamil for "name". Tell Claude what you're building. Peyar walks through strategy, generates names across 12 methods (regional Indian languages included), scores how they sound, screens their meaning across 11 Indian languages, checks live `.com` / `.in` / `.co.in` domains and social handles, and grades the shortlist on a **36-point checklist** with India-specific legal checks (IP India trade marks, MCA name rules, the Emblems Act).
+*Peyar* is Tamil for "name". Tell Claude what you're building. Peyar walks through strategy, generates names across 12 methods (global English words, coined words, alphanumeric like Bira 91 or 82°E, and regional Indian languages, mixed by default), scores how they sound, screens their meaning across 11 Indian languages, checks live `.com` / `.in` / `.co.in` domains and social handles, and grades the shortlist on a **36-point checklist** with India-specific legal checks (IP India trade marks, MCA name rules, the Emblems Act).
 
 ```
 /peyar  D2C millet snacks brand from Coimbatore, going pan-India, mid-premium, warm and modern
@@ -18,7 +18,7 @@ Most Indian founders pick a name in an afternoon, then find out about the trade 
 
 1. **Intake**: product, audience, geography, price tier, tone, languages
 2. **Strategy**: classifies the brand as search, experience or credence, scans the category norm, and decides between playing inside the norm or against it
-3. **Generate**: 25–40 names across 12 methods (real word, regional language, Sanskrit, compound, coined, founder, place, alphanumeric, Hinglish, contrarian…)
+3. **Generate**: 25–40 names across 12 methods, with a default mix of ≥50% global-neutral names, ≥3 alphanumeric names and Indian-language options where they fit. Choose global-neutral, India-rooted or mix at intake
 4. **Quick screen**: `score.py` (syllables, vowel feel, spelling ambiguity, Indian accent traps such as v/w, z/j, th) plus a meaning screen
 5. **Deep check**: `check_name.py` (RDAP domains, YouTube/X/GitHub handles) plus the **36-point checklist** in 6 groups:
 
