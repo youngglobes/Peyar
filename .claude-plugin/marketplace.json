@@ -1,0 +1,15 @@
+{
+  "name": "peyar",
+  "owner": {
+    "name": "Pravin Mohanraj"
+  },
+  "description": "Peyar: open-source brand naming skill for Indian founders.",
+  "plugins": [
+    {
+      "name": "peyar",
+      "source": "./",
+      "description": "Name Indian brands like a branding studio (36-point checklist, IP India/MCA checks, regional-language naming).",
+      "version": "0.1.0"
+    }
+  ]
+}
